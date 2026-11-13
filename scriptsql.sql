@@ -20,21 +20,6 @@ categoria varchar(45) not null,
 precio decimal(10,2) not null,
 primary key (id));
 
-create table bodega(id int not null auto_increment,
-nombre varchar(45) not null,
-ubicacion varchar(45) not null,
-capacidad int not null,
-encargado varchar(45) not null,
-primary key (id));
-
-create table inventario(id int not null auto_increment,
-bodega_id int not null,
-producto_id int not null,
-stock int not null,
-primary key (id),
-foreign key (bodega_id) references bodega(id),
-foreign key (producto_id) references producto(id));
-
 create table rol(id int not null auto_increment,
 nombre varchar(45) not null,
 primary key(id));
@@ -43,7 +28,7 @@ create table usuario(id int not null auto_increment,
 nombre varchar(45) not null,
 apellidos varchar(45) not null,
 email varchar(45) not null,
-activo boolean,
+activo boolean not null,
 primary key (id));
 
 create table credenciales(id int not null auto_increment,
@@ -55,12 +40,29 @@ primary key (id),
 foreign key (usuario_id) references usuario(id),
 foreign key (rol_id) references rol(id));
 
+create table bodega(id int not null auto_increment,
+nombre varchar(45) not null,
+ubicacion varchar(45) not null,
+capacidad int not null,
+usuario_id int not null,
+primary key (id),
+foreign key (usuario_id) references usuario(id)
+);
+
+create table inventario(id int not null auto_increment,
+bodega_id int not null,
+producto_id int not null,
+stock int not null,
+primary key (id),
+foreign key (bodega_id) references bodega(id),
+foreign key (producto_id) references producto(id));
+
 create table movimiento(id int not null auto_increment,
-fecha timestamp not null default current_timestamp,
+fecha timestamp not null  ,
 tipo_movimiento enum("entrada","salida","transferencia") not null,
 usuario_id int not null,
-bodega_origen_id int,
-bodega_destino_id int,
+bodega_origen_id int not null,
+bodega_destino_id int not null,
 primary key (id),
 foreign key (usuario_id) references usuario(id),
 foreign key (bodega_origen_id) references bodega(id),

@@ -9,8 +9,6 @@ Esquemas: Bv
 ===================================
 */
 
-show tables;
-
 create database logitrack_database;
 
 use logitrack_database;

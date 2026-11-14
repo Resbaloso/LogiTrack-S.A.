@@ -1,7 +1,17 @@
 package com.logitracksa.logitracksaapi.model;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+@Entity
+@Table
+@Setter
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Bodega {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

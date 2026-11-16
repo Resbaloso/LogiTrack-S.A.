@@ -15,7 +15,7 @@ import lombok.Setter;
 public class Inventario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(nullable = false, name = "bodega_id")
     private Bodega bodega;

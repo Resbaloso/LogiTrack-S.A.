@@ -15,7 +15,7 @@ import lombok.Setter;
 public class Movimiento {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
     @Column(nullable = false)
     private java.time.LocalDate fecha;
     @Column(nullable = false, name = "tipo_movimiento")

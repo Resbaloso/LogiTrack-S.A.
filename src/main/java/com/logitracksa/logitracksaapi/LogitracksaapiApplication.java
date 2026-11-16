@@ -8,6 +8,7 @@ public class LogitracksaapiApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(LogitracksaapiApplication.class, args);
+		System.out.println("Necesito ya el token pirata. 😭🙏");
 	}
 
 }

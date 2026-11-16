@@ -15,7 +15,7 @@ import lombok.Setter;
 public class DetalleMovimiento {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(nullable = false, name = "movimiento_id")
     private Movimiento movimiento;

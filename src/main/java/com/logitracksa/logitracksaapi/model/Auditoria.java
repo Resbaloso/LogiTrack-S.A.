@@ -15,7 +15,7 @@ import lombok.Setter;
 public class Auditoria {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
     @Column(nullable = false,name = "tipo_operacion")
     private String tipoOperacion;
     @Column(nullable = false)

@@ -15,7 +15,7 @@ import lombok.Setter;
 public class Credenciales {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
     @Column(nullable = false)
     private String username;
     @Column(nullable = false)

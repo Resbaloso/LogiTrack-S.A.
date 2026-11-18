@@ -5,20 +5,20 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
-public interface InventarioRepository extends JpaRepository<Inventario, Integer> {
+public interface InventarioRepository extends JpaRepository<Inventario, Long> {
 
-    // Productos con stock < 10
+    // Productos con stock menor a 10
     List<Inventario> findByStockLessThan(int stock);
 
-    List<Inventario> findByBodegaId(Integer bodegaId);
+    List<Inventario> findByBodegaId(Long bodegaId);
 
-    List<Inventario> findByProductoId(Integer productoId);
+    List<Inventario> findByProductoId(Long productoId);
 
-    List<Inventario> findByBodegaIdAndProductoId(Integer bodegaId, Integer productoId);
+    List<Inventario> findByBodegaIdAndProductoId(Long bodegaId, Long productoId);
 
-    boolean existsByBodegaIdAndProductoId(Integer bodegaId, Integer productoId);
+    boolean existsByBodegaIdAndProductoId(Long bodegaId, Long productoId);
 
-    boolean existsByProductoId(Integer productoId);
+    boolean existsByProductoId(Long productoId);
 
-    boolean existsByBodegaId(Integer bodegaId);
+    boolean existsByBodegaId(Long bodegaId);
 }

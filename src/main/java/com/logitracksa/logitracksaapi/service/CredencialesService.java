@@ -9,17 +9,17 @@ public interface CredencialesService {
 
     CredencialesDtoResponse guardar(CredencialesDtoRequest dto);
 
-    CredencialesDtoResponse actualizar(CredencialesDtoRequest dto, Integer id);
+    CredencialesDtoResponse actualizar(CredencialesDtoRequest dto, Long id);
 
-    void eliminar(Integer id);
+    void eliminar(Long id);
 
     List<CredencialesDtoResponse> listar();
 
-    CredencialesDtoResponse buscarId(Integer id);
+    CredencialesDtoResponse buscarId(Long id);
 
     List<CredencialesDtoResponse> buscarUsername(String username);
 
-    List<CredencialesDtoResponse> buscarUsuarioId(Integer usuarioId);
+    List<CredencialesDtoResponse> buscarUsuarioId(Long usuarioId);
 
-    List<CredencialesDtoResponse> buscarRolId(Integer rolId);
+    List<CredencialesDtoResponse> buscarRolId(Long rolId);
 }

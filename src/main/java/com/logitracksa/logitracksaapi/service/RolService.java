@@ -9,13 +9,13 @@ public interface RolService {
 
     RolDtoResponse guardar(RolDtoRequest dto);
 
-    RolDtoResponse actualizar(RolDtoRequest dto, Integer id);
+    RolDtoResponse actualizar(RolDtoRequest dto, Long id);
 
-    void eliminar(Integer id);
+    void eliminar(Long id);
 
     List<RolDtoResponse> listar();
 
-    RolDtoResponse buscarId(Integer id);
+    RolDtoResponse buscarId(Long id);
 
     List<RolDtoResponse> buscarNombre(String nombre);
 }

@@ -6,17 +6,17 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.time.LocalDate;
 import java.util.List;
 
-public interface AuditoriaRepository extends JpaRepository<Auditoria, Integer> {
+public interface AuditoriaRepository extends JpaRepository<Auditoria, Long> {
 
-    // Consulta de auditorías por usuario
-    List<Auditoria> findByUsuarioId(Integer usuarioId);
+    // Auditorías por usuario
+    List<Auditoria> findByUsuarioId(Long usuarioId);
 
-    // Consulta de auditorías por tipo de operación
+    // Auditorías por tipo de operación
     List<Auditoria> findByTipoOperacion(String tipoOperacion);
 
     List<Auditoria> findByEntidadAfectada(String entidadAfectada);
 
     List<Auditoria> findByFechaBetween(LocalDate fechaInicio, LocalDate fechaFin);
 
-    List<Auditoria> findByUsuarioIdAndTipoOperacion(Integer usuarioId, String tipoOperacion);
+    List<Auditoria> findByUsuarioIdAndTipoOperacion(Long usuarioId, String tipoOperacion);
 }

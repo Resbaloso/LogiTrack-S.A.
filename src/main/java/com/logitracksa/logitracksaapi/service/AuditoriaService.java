@@ -10,16 +10,16 @@ public interface AuditoriaService {
 
     AuditoriaDtoResponse guardar(AuditoriaDtoRequest dto);
 
-    AuditoriaDtoResponse actualizar(AuditoriaDtoRequest dto, Integer id);
+    AuditoriaDtoResponse actualizar(AuditoriaDtoRequest dto, Long id);
 
-    void eliminar(Integer id);
+    void eliminar(Long id);
 
     List<AuditoriaDtoResponse> listar();
 
-    AuditoriaDtoResponse buscarId(Integer id);
+    AuditoriaDtoResponse buscarId(Long id);
 
     // Auditorías por usuario
-    List<AuditoriaDtoResponse> buscarUsuario(Integer usuarioId);
+    List<AuditoriaDtoResponse> buscarUsuario(Long usuarioId);
 
     // Auditorías por tipo de operación
     List<AuditoriaDtoResponse> buscarTipoOperacion(String tipoOperacion);
@@ -28,5 +28,5 @@ public interface AuditoriaService {
 
     List<AuditoriaDtoResponse> buscarRangoFechas(LocalDate fechaInicio, LocalDate fechaFin);
 
-    List<AuditoriaDtoResponse> buscarUsuarioYTipo(Integer usuarioId, String tipoOperacion);
+    List<AuditoriaDtoResponse> buscarUsuarioYTipo(Long usuarioId, String tipoOperacion);
 }

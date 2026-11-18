@@ -10,24 +10,24 @@ public interface MovimientoService {
 
     MovimientoDtoResponse guardar(MovimientoDtoRequest dto);
 
-    MovimientoDtoResponse actualizar(MovimientoDtoRequest dto, Integer id);
+    MovimientoDtoResponse actualizar(MovimientoDtoRequest dto, Long id);
 
-    void eliminar(Integer id);
+    void eliminar(Long id);
 
     List<MovimientoDtoResponse> listar();
 
-    MovimientoDtoResponse buscarId(Integer id);
+    MovimientoDtoResponse buscarId(Long id);
 
-    List<MovimientoDtoResponse> buscarUsuario(Integer usuarioId);
+    List<MovimientoDtoResponse> buscarUsuario(Long usuarioId);
 
     List<MovimientoDtoResponse> buscarTipo(String tipoMovimiento);
 
-    // Movimientos por rango de fechas
+    // Movimientos entre un rango de fechas
     List<MovimientoDtoResponse> buscarRangoFechas(LocalDate fechaInicio, LocalDate fechaFin);
 
-    List<MovimientoDtoResponse> buscarBodegaOrigen(Integer bodegaOrigenId);
+    List<MovimientoDtoResponse> buscarBodegaOrigen(Long bodegaOrigenId);
 
-    List<MovimientoDtoResponse> buscarBodegaDestino(Integer bodegaDestinoId);
+    List<MovimientoDtoResponse> buscarBodegaDestino(Long bodegaDestinoId);
 
-    List<MovimientoDtoResponse> buscarUsuarioYTipo(Integer usuarioId, String tipoMovimiento);
+    List<MovimientoDtoResponse> buscarUsuarioYTipo(Long usuarioId, String tipoMovimiento);
 }

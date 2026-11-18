@@ -19,7 +19,7 @@ public record AuditoriaDtoRequest(
         @Schema(description = "ID del usuario que realizó la operación", example = "1")
         @NotNull(message = "El ID del usuario no puede estar nulo")
         @Positive(message = "El ID del usuario debe ser positivo")
-        Integer usuarioId,
+        Long usuarioId,
 
         @Schema(description = "Nombre de la entidad que fue afectada por la operación", example = "Bodega")
         @NotBlank(message = "La entidad afectada no puede estar vacía")

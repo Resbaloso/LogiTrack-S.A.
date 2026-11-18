@@ -9,20 +9,20 @@ public interface InventarioService {
 
     InventarioDtoResponse guardar(InventarioDtoRequest dto);
 
-    InventarioDtoResponse actualizar(InventarioDtoRequest dto, Integer id);
+    InventarioDtoResponse actualizar(InventarioDtoRequest dto, Long id);
 
-    void eliminar(Integer id);
+    void eliminar(Long id);
 
     List<InventarioDtoResponse> listar();
 
-    InventarioDtoResponse buscarId(Integer id);
+    InventarioDtoResponse buscarId(Long id);
 
-    List<InventarioDtoResponse> buscarBodega(Integer bodegaId);
+    List<InventarioDtoResponse> buscarBodega(Long bodegaId);
 
-    List<InventarioDtoResponse> buscarProducto(Integer productoId);
+    List<InventarioDtoResponse> buscarProducto(Long productoId);
 
-    List<InventarioDtoResponse> buscarBodegaYProducto(Integer bodegaId, Integer productoId);
+    List<InventarioDtoResponse> buscarBodegaYProducto(Long bodegaId, Long productoId);
 
-    // productos con stock < 10
+    // Productos con stock bajo (< 10)
     List<InventarioDtoResponse> buscarStockBajo(int umbral);
 }

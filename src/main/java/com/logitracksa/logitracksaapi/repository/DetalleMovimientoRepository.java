@@ -5,18 +5,18 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
-public interface DetalleMovimientoRepository extends JpaRepository<DetalleMovimiento, Integer> {
+public interface DetalleMovimientoRepository extends JpaRepository<DetalleMovimiento, Long> {
 
-    List<DetalleMovimiento> findByMovimientoId(Integer movimientoId);
+    List<DetalleMovimiento> findByMovimientoId(Long movimientoId);
 
-    List<DetalleMovimiento> findByProductoId(Integer productoId);
+    List<DetalleMovimiento> findByProductoId(Long productoId);
 
-    boolean existsByMovimientoId(Integer movimientoId);
+    boolean existsByMovimientoId(Long movimientoId);
 
-    boolean existsByProductoId(Integer productoId);
+    boolean existsByProductoId(Long productoId);
 
-    List<DetalleMovimiento> findByMovimientoIdAndProductoId(Integer movimientoId, Integer productoId);
+    List<DetalleMovimiento> findByMovimientoIdAndProductoId(Long movimientoId, Long productoId);
 
-    // Para el reporte de producto con más movimientos
+    // Para el reporte de los más movidos
     List<DetalleMovimiento> findByCantidadGreaterThanEqual(int cantidad);
 }

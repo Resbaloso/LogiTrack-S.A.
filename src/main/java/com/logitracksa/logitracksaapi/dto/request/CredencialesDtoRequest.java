@@ -20,10 +20,10 @@ public record CredencialesDtoRequest(
         @Schema(description = "ID del usuario al que pertenecen las credenciales", example = "1")
         @NotNull(message = "El ID del usuario no puede estar nulo")
         @Positive(message = "El ID del usuario debe ser positivo")
-        Integer usuarioId,
+        Long usuarioId,
 
         @Schema(description = "ID del rol asignado al usuario", example = "1")
         @NotNull(message = "El ID del rol no puede estar nulo")
         @Positive(message = "El ID del rol debe ser positivo")
-        Integer rolId
+        Long rolId
 ) {}

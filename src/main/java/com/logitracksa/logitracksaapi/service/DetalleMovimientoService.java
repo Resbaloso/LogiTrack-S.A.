@@ -9,19 +9,19 @@ public interface DetalleMovimientoService {
 
     DetalleMovimientoDtoResponse guardar(DetalleMovimientoDtoRequest dto);
 
-    DetalleMovimientoDtoResponse actualizar(DetalleMovimientoDtoRequest dto, Integer id);
+    DetalleMovimientoDtoResponse actualizar(DetalleMovimientoDtoRequest dto, Long id);
 
-    void eliminar(Integer id);
+    void eliminar(Long id);
 
     List<DetalleMovimientoDtoResponse> listar();
 
-    DetalleMovimientoDtoResponse buscarId(Integer id);
+    DetalleMovimientoDtoResponse buscarId(Long id);
 
-    List<DetalleMovimientoDtoResponse> buscarMovimiento(Integer movimientoId);
+    List<DetalleMovimientoDtoResponse> buscarMovimiento(Long movimientoId);
 
-    List<DetalleMovimientoDtoResponse> buscarProducto(Integer productoId);
+    List<DetalleMovimientoDtoResponse> buscarProducto(Long productoId);
 
-    List<DetalleMovimientoDtoResponse> buscarMovimientoYProducto(Integer movimientoId, Integer productoId);
+    List<DetalleMovimientoDtoResponse> buscarMovimientoYProducto(Long movimientoId, Long productoId);
 
     List<DetalleMovimientoDtoResponse> buscarCantidadMinima(int cantidad);
 }

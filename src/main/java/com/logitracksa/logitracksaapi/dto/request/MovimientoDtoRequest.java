@@ -19,15 +19,15 @@ public record MovimientoDtoRequest(
         @Schema(description = "ID del usuario responsable del movimiento", example = "1")
         @NotNull(message = "El ID del usuario no puede estar nulo")
         @Positive(message = "El ID del usuario debe ser positivo")
-        Integer usuarioId,
+        Long usuarioId,
 
         @Schema(description = "ID de la bodega de origen del movimiento", example = "1")
         @NotNull(message = "El ID de la bodega origen no puede estar nulo")
         @Positive(message = "El ID de la bodega origen debe ser positivo")
-        Integer bodegaOrigenId,
+        Long bodegaOrigenId,
 
         @Schema(description = "ID de la bodega de destino del movimiento", example = "2")
         @NotNull(message = "El ID de la bodega destino no puede estar nulo")
         @Positive(message = "El ID de la bodega destino debe ser positivo")
-        Integer bodegaDestinoId
+        Long bodegaDestinoId
 ) {}

@@ -9,19 +9,19 @@ public interface BodegaService {
 
     BodegaDtoResponse guardar(BodegaDtoRequest dto);
 
-    BodegaDtoResponse actualizar(BodegaDtoRequest dto, Integer id);
+    BodegaDtoResponse actualizar(BodegaDtoRequest dto, Long id);
 
-    void eliminar(Integer id);
+    void eliminar(Long id);
 
     List<BodegaDtoResponse> listar();
 
-    BodegaDtoResponse buscarId(Integer id);
+    BodegaDtoResponse buscarId(Long id);
 
     List<BodegaDtoResponse> buscarNombre(String nombre);
 
     List<BodegaDtoResponse> buscarUbicacion(String ubicacion);
 
-    List<BodegaDtoResponse> buscarEncargado(Integer usuarioId);
+    List<BodegaDtoResponse> buscarEncargado(Long usuarioId);
 
     List<BodegaDtoResponse> buscarCapacidadMinima(int capacidad);
 }

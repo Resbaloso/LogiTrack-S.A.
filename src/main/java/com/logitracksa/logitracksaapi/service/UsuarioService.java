@@ -9,15 +9,15 @@ public interface UsuarioService {
 
     UsuarioDtoResponse guardar(UsuarioDtoRequest dto);
 
-    UsuarioDtoResponse actualizar(UsuarioDtoRequest dto, Integer id);
+    UsuarioDtoResponse actualizar(UsuarioDtoRequest dto, Long id);
 
-    void eliminar(Integer id);
+    void eliminar(Long id);
 
     List<UsuarioDtoResponse> listar();
 
-    UsuarioDtoResponse buscarId(Integer id);
+    UsuarioDtoResponse buscarId(Long id);
 
-    UsuarioDtoResponse buscarEmail(String email);
+    List<UsuarioDtoResponse> buscarEmail(String email);
 
     List<UsuarioDtoResponse> buscarActivos(boolean activo);
 }

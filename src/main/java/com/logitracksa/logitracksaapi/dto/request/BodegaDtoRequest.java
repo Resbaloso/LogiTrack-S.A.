@@ -25,5 +25,5 @@ public record BodegaDtoRequest(
         @Schema(description = "ID del usuario encargado de la bodega", example = "1")
         @NotNull(message = "El ID del encargado no puede estar nulo")
         @Positive(message = "El ID del encargado debe ser positivo")
-        Integer usuarioId
+        Long usuarioId
 ) {}

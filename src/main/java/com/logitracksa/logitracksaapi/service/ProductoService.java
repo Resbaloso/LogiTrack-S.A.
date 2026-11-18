@@ -10,13 +10,13 @@ public interface ProductoService {
 
     ProductoDtoResponse guardar(ProductoDtoRequest dto);
 
-    ProductoDtoResponse actualizar(ProductoDtoRequest dto, Integer id);
+    ProductoDtoResponse actualizar(ProductoDtoRequest dto, Long id);
 
-    void eliminar(Integer id);
+    void eliminar(Long id);
 
     List<ProductoDtoResponse> listar();
 
-    ProductoDtoResponse buscarId(Integer id);
+    ProductoDtoResponse buscarId(Long id);
 
     List<ProductoDtoResponse> buscarCategoria(String categoria);
 

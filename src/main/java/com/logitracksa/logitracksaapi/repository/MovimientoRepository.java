@@ -6,24 +6,24 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.time.LocalDate;
 import java.util.List;
 
-public interface MovimientoRepository extends JpaRepository<Movimiento, Integer> {
+public interface MovimientoRepository extends JpaRepository<Movimiento, Long> {
 
-    List<Movimiento> findByUsuarioId(Integer usuarioId);
+    List<Movimiento> findByUsuarioId(Long usuarioId);
 
     List<Movimiento> findByTipoMovimiento(String tipoMovimiento);
 
-    // Movimientos por rango de fechas
+    // Moovimientos entre un rango de fechas
     List<Movimiento> findByFechaBetween(LocalDate fechaInicio, LocalDate fechaFin);
 
-    List<Movimiento> findByBodegaOrigenId(Integer bodegaOrigenId);
+    List<Movimiento> findByBodegaOrigenId(Long bodegaOrigenId);
 
-    List<Movimiento> findByBodegaDestinoId(Integer bodegaDestinoId);
+    List<Movimiento> findByBodegaDestinoId(Long bodegaDestinoId);
 
-    List<Movimiento> findByUsuarioIdAndTipoMovimiento(Integer usuarioId, String tipoMovimiento);
+    List<Movimiento> findByUsuarioIdAndTipoMovimiento(Long usuarioId, String tipoMovimiento);
 
-    boolean existsByUsuarioId(Integer usuarioId);
+    boolean existsByUsuarioId(Long usuarioId);
 
-    boolean existsByBodegaOrigenId(Integer bodegaOrigenId);
+    boolean existsByBodegaOrigenId(Long bodegaOrigenId);
 
-    boolean existsByBodegaDestinoId(Integer bodegaDestinoId);
+    boolean existsByBodegaDestinoId(Long bodegaDestinoId);
 }

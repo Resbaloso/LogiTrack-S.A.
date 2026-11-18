@@ -9,12 +9,12 @@ public record InventarioDtoRequest(
         @Schema(description = "ID de la bodega donde se registra el inventario", example = "1")
         @NotNull(message = "El ID de la bodega no puede estar nulo")
         @Positive(message = "El ID de la bodega debe ser positivo")
-        Integer bodegaId,
+        Long bodegaId,
 
         @Schema(description = "ID del producto registrado en el inventario", example = "1")
         @NotNull(message = "El ID del producto no puede estar nulo")
         @Positive(message = "El ID del producto debe ser positivo")
-        Integer productoId,
+        Long productoId,
 
         @Schema(description = "Stock actual del producto en la bodega", example = "150")
         @NotNull(message = "El stock no puede estar nulo")
